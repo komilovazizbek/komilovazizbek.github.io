@@ -8,7 +8,8 @@ var elTextshifr = document.querySelector('.text-shifr');
 var elBeforeText = document.querySelector('.before-text');
 var massiv;
 var alifbo = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
-var name;
+var textOne;
+var textTwo;
 var index;
 var number; 
 alifbo.sort();
@@ -18,8 +19,8 @@ alert("Bu yerda lotin alifbosi keltirilgan \n" + alifbo);
 
 elBtn.addEventListener('click', function(){
 
-  name = elInputString.value;
-  massiv = name.split(''); 
+  textOne = elInputString.value;
+  massiv = textOne.split(''); 
   number = parseInt(elInputNumber.value, 10);
 
 
@@ -41,10 +42,10 @@ elBtn.addEventListener('click', function(){
    }
  }   
 }
-name = massiv.toString();
+textOne = massiv.toString();
 for (i=0; i<massiv.length;i++)
 {
-elTextshifr.innerHTML = (name.replace(/,/gi,""));
+elTextshifr.innerHTML = (textOne.replace(/,/gi,""));
 }
 
 }else{
@@ -52,11 +53,10 @@ elTextshifr.innerHTML = (name.replace(/,/gi,""));
 }      
 });
 
-
 elBtnCode.addEventListener('click', function(){
-  name = elInputShifr.value;
-  massiv = name.split(''); 
-  numberTwo = parseInt(elInputNumber.value, 10);
+  textTwo = elInputShifr.value;
+  massiv = textTwo.split(''); 
+  numberTwo = parseInt(elInputNumberTwo.value, 10);
   if(numberTwo > 0)
   {
 
@@ -77,10 +77,10 @@ elBtnCode.addEventListener('click', function(){
  }   
 }
 
-name = massiv.toString();
+textTwo = massiv.toString();
 for (i=0; i < massiv.length; i++)
 {
-elBeforeText.innerHTML = (name.replace(/,/gi,""));
+elBeforeText.innerHTML = (textTwo.replace(/,/gi,""));
 }
 }
 else{
